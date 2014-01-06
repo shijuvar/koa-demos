@@ -4,12 +4,13 @@ var request = Q.denodeify(require('request'));
 var app = module.exports = koa();
 
 app.use(function *(){
-    var response = yield doHttpRequest('https://twitter.com/shijucv');
+    var response = yield getHttpRequest('https://twitter.com/shijucv');
     this.body =  response.body;
 });
 
-function *doHttpRequest(url) {
+function *getHttpRequest(url) {
     var resultParams = yield request(url);
     return resultParams[0];
 }
-if (!module.parent) app.listen(3000);
+app.listen(3000);
+console.log('listening on port 3000');

@@ -1,0 +1,15 @@
+{
+    "name": "koa-demo",
+    "description": "Samples for KoaJS",
+    "author": "shijuvar",
+    "version": "0.0.1",
+    "repository": "https://github.com/shijuvar/koa-demos",
+    "dependencies": {
+        "koa": "~0.2.0",
+        "request" : "~2.30.0",
+        "q" : "~1.0.0"
+    },
+    "engines": {
+        "node": ">= 11.3"
+    }
+}
